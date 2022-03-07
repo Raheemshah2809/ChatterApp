@@ -409,10 +409,10 @@ body {
 
 @media screen and (min-width: 1024px) {
     .alert {
-        padding: 20px 40px;
+        padding: 19px 56px;
         width: 90%;
         position: absolute;
-        right: 0;
+        right: -50px;
         top: 75px;
         border-radius: 4px;
         border-left: 8px solid #ffa502;

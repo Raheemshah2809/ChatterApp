@@ -10,7 +10,7 @@ const verifyPassword = (email) => {
             alert.onClose(signIn);
         })
         .catch(function (error) {
-            alert.warning("invalid email or bad network connection");
+            alert.warning("Invalid Email Or Bad Network Connection");
             alert.onClose(signIn);
         });
 };  
@@ -24,7 +24,7 @@ const register = () => {
     if (email.trim() == "") {
         alert.warning("Enter an Email");
     } else if (!isValidEmail) {
-        alert.warning("Enter A Valid Ac.Uk Email");
+        alert.warning("Enter A Valid AC.UK Email");
     } else if (email != reemail) {  
         alert.warning("Emails Do Not Match");
     } else {
@@ -66,7 +66,7 @@ const forgotPassword = (email) => {
             alert.warning("email sent");
         })
         .catch(function (error) {
-            alert.warning("invalid email or bad network connection");
+            alert.warning("Invalid Email Or Bad Network Connection");
         });
 };
 
