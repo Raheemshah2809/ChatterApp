@@ -44,8 +44,7 @@ nav li {
     text-align: center;
     color: white;
     transition: background-color 0.5s 0.2s ease, color 0.3s ease;
-
-    font-size: 12px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 800;
