@@ -1,14 +1,5 @@
-const showRegistration = () => {
-    document.querySelector("#registration-page").classList.remove("hide");
-    document.querySelector("#login-page").classList.add("hide");
-    document.querySelector("#homepage").classList.add("hide");
-};
 
-const showLogin = () => {
-    document.querySelector("#registration-page").classList.add("hide");
-    document.querySelector("#login-page").classList.remove("hide");
-    document.querySelector("#homepage").classList.add("hide");
-};
+
 
 const verifyPassword = (email) => {
     const signIn = () => window.location.replace("signin.html");
@@ -89,18 +80,13 @@ document.querySelector("#register").addEventListener("click", () => {
     register();
 });
 
-document.querySelector("#show-login").addEventListener("click", () => {
-    showLogin();
-});
+
 
 
 document.querySelector("#login").addEventListener("click", () => {
     login();
 });
 
-document.querySelector("#show-register").addEventListener("click", () => {
-    showRegistration();
-});
 
 document.querySelector("#login-password").addEventListener("keyup", (e) => {
     if (e.keyCode == 13) {
@@ -118,6 +104,17 @@ document.querySelector("#forgot-password").addEventListener("click", () => {
     }
 });
 
+const showRegistration = () => {
+    document.querySelector("#registration-page").classList.remove("hide");
+    document.querySelector("#login-page").classList.add("hide");
+
+};
+
+
+const showLogin = () => {
+    document.querySelector('#login.form-title').click();
+};
+
 window.addEventListener('load', () => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -126,6 +123,8 @@ window.addEventListener('load', () => {
         action = action.toLowerCase();    
         if(action === 'signup') {
             showRegistration();
-        }
+        } 
+    } else {
+        showLogin();
     }
 })
